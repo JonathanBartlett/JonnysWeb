@@ -1,6 +1,9 @@
 .wrapper
-	%h3= @post.title
-	%p= @post.content
+	%h3 
+		=@post.title
+		| 
+		=link_to "Back", :back 
+	%p= simple_format(@post.content)
 	%hr/
 	.data.clearfix
 		%p.f-left
@@ -11,6 +14,7 @@
 		.button-group.f-right
 			%a.button{href: edit_post_path}
 				Edit
-			=link_to 'Delete', root_path, :action => 'Destroy', :confirm=>'Are you sure?', class: 'button'
+			%a.button{:href => ""}
+				Delete
 				
 	
