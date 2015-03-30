@@ -1,0 +1,39 @@
+!!!
+%html
+%head
+	%title="JonnysWeb"
+	%script{:src => "http://code.jquery.com/jquery.min.js", :type => "text/javascript"}
+	%meta{:name => "viewport", :content => "width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"}/
+	%link{:rel => "stylesheet", :href => "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"}/
+	=stylesheet_link_tag "application", media: "all"
+%body
+	%header.clearfix
+		#logo
+			%h1
+				%a{href: root_path}
+					Jonathan Bartlett
+	%nav.clearfix
+		%ul
+			%li
+				%a{:href => ""}
+					Home
+					/ Current Section
+			%li
+				%a{:href => ""}
+					Forum
+
+		.handle.clearfix
+			.right
+				%i.fa.fa-bars
+
+
+	%section.wrapper.clearfix
+		
+		=yield
+
+	:javascript
+		$('.handle').on('click', function() {
+			$('nav ul').toggleClass('showing');
+		});
+
+		
