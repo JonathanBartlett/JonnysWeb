@@ -1,3 +1,5 @@
 == README
+Jonathan Bartlett's Blog
 
-<h1>Jonathan Bartlett Blog</h1>
+* About Page
+* Forum/Blog
