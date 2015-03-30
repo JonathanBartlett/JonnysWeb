@@ -199,13 +199,18 @@
 .button-group {
 	margin: 16px 0;
 	.button {
-
+		min-width: 100%;
 		color: $light;
 		text-decoration: none;
 		background: $bg;
 		border-top: $accent 2px solid;
 		border-bottom: $accent 2px solid;
 		padding: 10px;
+		text-align: center;
+		border-radius: 0;
+		border-left: none;
+		border-right: $accent 2px solid;
+		flex: 1;
 
 	}
 
@@ -214,13 +219,14 @@
 		border-radius: 0.5em 0 0 0.5em;
 		border: $accent 2px solid;
 
+
 	}
 
 	.button:last-child {
 
 		border-radius: 0 0.5em 0.5em 0;
 		border: $accent 2px solid;
-
+		border-left: 0;
 	}
 
 }
