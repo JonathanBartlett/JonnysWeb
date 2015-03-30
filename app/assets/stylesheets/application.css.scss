@@ -15,3 +15,84 @@
  */
 
  @import 'normalize.css.scss';
+ @import 'variables.scss';
+ /*Fonts*/
+ @import url(http://fonts.googleapis.com/css?family=Lato:400,300,700,100);
+ @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,300,700);
+
+ /*Body*/
+ body {
+ 	
+ 	font-family: 'Lato', 'Ubuntu', Arial, sans-serif;
+ 	font-weight: 400; 
+
+ 	
+ }
+
+ header {
+
+	padding: 10px;
+ 	background: $bg;
+
+ 	#logo {
+		
+		float: left;
+
+		h1 {
+				padding: 0;
+			 	margin: 0;
+				a {
+			 		color: $light;
+			 		padding: 0;
+			 		margin: 0;
+			 		text-decoration: none;
+					&:hover {
+					
+						color: $lightsemi;
+
+					}
+				}
+		 	}
+ 		
+ 	}
+
+ 	#nav {
+
+		float: right;
+
+		li {
+			line-height: 40px;
+			display: inline-block;
+			list-style: none;
+			padding: 0 20px;
+			text-align: right;
+			
+			a {
+
+				color: $light;
+				text-decoration: none;
+
+				&:hover {
+					
+					color: $lightsemi;
+
+				}
+
+			}
+		}
+
+ 	}
+	
+
+ }
+
+ .clearfix:after {
+
+ 	content: " "; /* Older browser do not support empty content */
+   	visibility: hidden;
+   	display: block;
+   	height: 0;
+   	clear: both;
+ }
+	
+
