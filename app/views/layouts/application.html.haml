@@ -15,21 +15,19 @@
 	%nav.clearfix
 		%ul
 			%li
-				%a{:href => ""}
+				%a{href: root_path}
 					Home
 					/ Current Section
 			%li
-				%a{:href => ""}
+				%a{href: posts_path}
 					Forum
 
 		.handle.clearfix
 			.right
 				%i.fa.fa-bars
 
-
-	%section.wrapper.clearfix
 		
-		=yield
+	=yield
 
 	:javascript
 		$('.handle').on('click', function() {

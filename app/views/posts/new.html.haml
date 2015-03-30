@@ -1,0 +1,19 @@
+.wrapper
+	%h3
+		New Post
+
+	%hr/
+	
+	=form_for :post, url: posts_path do |f|
+		%p
+			=f.label :title
+			%br/
+			=f.text_field :title
+		%p
+			=f.label :content
+			%br/
+			=f.text_area :content
+		%p
+			=f.submit
+
+		
