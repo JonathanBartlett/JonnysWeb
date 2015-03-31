@@ -2,5 +2,48 @@
 	.wrapper
 		%h3.title-with-border Welcome to JonnysWeb
 	.wrapper
-		%a.button{:href => ""}
+		%a.button{:href => "#about"}
 			Learn More
+
+.section-fh-fw.clearfix{id: 'about'}
+	.wrapper.clearfix.aligncenter
+		%h2
+			About Me
+		%img.rounded{:src => "http://jonnysweb.co.uk/images/me.png", :alt => "Me"}/
+
+		%hr/
+
+		%p
+			My Name is Jonathan Scott Bartlett and I live in the United Kingdom. I have a passion for all things technology and have always been interested in developing websites and applications. Also I enjoy building computers and all of the research and planning required to do so. When I am not on a computer I am usually playing golf or doing school work.
+
+		%hr/
+
+		%h3
+			Quote of the Day
+
+		%p
+			%blockquote
+				"And this should throw up an error, brilliant - just what I wanted!"
+
+		%hr/
+		.socialico
+			%ul
+				%li
+					%a{:href => "https://www.facebook.com/jonnytechsweb?ref=hl"}
+						%i.fa.fa-facebook
+				%li
+					%a{:href => "https://twitter.com/jbartlettdev"}
+						%i.fa.fa-twitter
+				%li
+					%a{:href => "http://codepen.io/Jonnaaay/"}
+						%i.fa.fa-codepen
+				%li
+					%a{:href => "https://github.com/JonathanBartlett"}
+						%i.fa.fa-git
+				%li
+					%a{:href => "http://steamcommunity.com/id/Jonnaaay99"}
+						%i.fa.fa-steam
+
+		%hr/
+
+.section-fh-fw.clearfix{id: 'work'}

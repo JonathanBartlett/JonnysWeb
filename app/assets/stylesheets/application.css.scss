@@ -59,10 +59,17 @@
 
  }
  nav {
- 	width: 100%;
+ 	max-width: 100%;
 	padding: 0 20px;
  	background: $bg;
  	border-top: 2px solid $light;
+
+	div, li {
+
+		display: inline-block;
+
+	}
+
   	ul {
  		overflow: hidden;
  		padding: 0;
@@ -93,8 +100,32 @@
 
  		}
  	}
+	
 
  }
+.submenucont {
+	.submenu:last-child {
+
+		border-right: 3px solid $light;
+		padding-right: 40px;
+
+	}
+
+ 	.submenu {
+
+		display: none;
+		padding: 0 10px;
+
+
+ 	}
+}
+
+
+.display {
+
+	display: inline-block !important; 
+
+}
 	
  .handle {
 	min-width: 100%;
@@ -118,6 +149,23 @@
 		float: left;
 
 	}
+
+ }
+
+ .menurev-clicked {
+
+ 	a {
+
+		color: $lightsemi;
+
+
+ 	}
+
+ 	i {
+
+		color: $lightsemi;
+
+ 	}
 
  }
  @media screen and (max-width: 500px) {
@@ -156,11 +204,29 @@
  		.showing {
 
 			border-top: 2px solid $light;
-			max-height: 10em;
+			max-height: 15em;
 
  		}
 
- 	}	
+ 	}
+
+ 	.submenucont {
+
+ 		.submenu:last-child {
+
+			border-bottom: 3px solid $light;
+
+ 		}
+
+ 		li {
+
+			padding: 0 !important;
+
+ 		}
+	
+		display: block;
+
+ 	}
 
  }
 
@@ -173,7 +239,6 @@
 	
  .wrapper {
 
-	
 	max-width: 1040px;
 	margin: 0 auto;
 	padding: 20px;
@@ -260,7 +325,7 @@
 
 	display: flex;
 	flex-direction: column;
-	min-height: calc(100vh - 133px);
+	min-height: calc(100vh - 123px);
 	justify-content: center;
 	align-items: center;
 }
@@ -285,8 +350,9 @@ a {
 	}
 .postwrap {
 	
+	box-sizing: border-box;
 	width: 100%;
-	padding: 30px;
+	padding: 0 30px;
 	border-top: 2px $accent solid;
 	border-bottom: 2px $accent solid;
 	margin: 20px 0;
@@ -307,6 +373,109 @@ a {
 
 
 
+
+
+}
+
+@media (max-width: 500px) {
+
+	.postwrap {
+
+			width: 95%;
+			margin: 10px auto;
+			border-radius: 1em;
+			border: 2px $accent solid;
+
+	}
+
+}
+
+.capitalize {
+
+	text-transform: capitalize;
+
+}
+
+.section-fh-fw {
+
+
+		min-height: 100vh;
+		width: 100%;
+		display: flex;
+		border-top: 3px solid $accent;
+
+
+}
+
+.half {
+
+	width: 50%;
+	
+	text-align: center;
+
+
+}
+
+.rounded {
+	display: inline-block;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-top: 20px;
+	max-width: 200px;
+
+}
+
+.aligncenter {
+
+	text-align: center;
+
+}
+
+.socialico {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	
+	ul {
+
+		padding: 0;
+
+		li {
+
+			display: inline-block;
+
+			i {
+				
+				font-size: 4em;
+				padding: 20px;
+				color: $accent;
+			}
+
+			&:hover {
+	
+				i {
+
+					color: $darksemi;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+blockquote {
+
+
+
+	color: $accent;
+	font-size: 1.2em !important;
+	font-style: italic;
 
 
 }

@@ -14,13 +14,29 @@
 					Jonathan Bartlett
 	%nav.clearfix
 		%ul
-			%li
-				%a{href: root_path}
-					Home
-					/ Current Section
+			-if current_page?(controller: 'main')
+				%li.menurev{style: "cursor: pointer"}
+					%a{href: "", style: "pointer-events: none; cursor: pointer;"}
+						Home
+						%i.fa.fa-angle-right{style: "margin-left: 10px;"}
+				.submenucont	
+					%li.submenu
+						%a{:href => "#about"}
+							About Me
+					%li.submenu
+						%a{:href => "#work"}
+							My Work
+					%li.submenu
+						%a{:href => ""}
+							Hire Me
+			-else
+				%li.menurev
+					%a{href: root_path}
+						Home
 			%li
 				%a{href: posts_path}
 					Forum
+
 
 		.handle.clearfix
 			.right
@@ -36,4 +52,24 @@
 			$('nav ul').toggleClass('showing');
 		});
 
+		$('.menurev').on('click', function() {
+			
+			$('.submenucont li.submenu').toggleClass('display');
+
+		});
+
+		$(document).ready(function(){
+		$('a[href^="#"]').on('click',function (e) {
+		e.preventDefault();
+
+		var target = this.hash;
+		var $target = $(target);
+
+		$('html, body').stop().animate({
+		'scrollTop': $target.offset().top
+		}, 900, 'swing', function () {
+		window.location.hash = target;
+		});
+		});
+		});
 		
